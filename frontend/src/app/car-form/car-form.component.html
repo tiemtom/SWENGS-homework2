@@ -1,0 +1,43 @@
+<form [formGroup]="carFormGroup" class="car-form">
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Name" formControlName="name" required>
+    <mat-hint align="end">The model name of the car</mat-hint>
+    <mat-error *ngIf="carFormGroup.controls.name.hasError('required')">Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Licence Plate" formControlName="license_plate" required>
+    <mat-hint align="end">The licence plate name of the car</mat-hint>
+    <mat-error *ngIf="carFormGroup.controls.name.hasError('required')">Name is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Manufacturer" formControlName="manufacturer" required>
+      <mat-option [value]="null">Unknown</mat-option>
+      <mat-option [value]="manufacturerOption.id"
+                  *ngFor="let manufacturerOption of manufacturerOptions">{{manufacturerOption.name}}</mat-option>
+    </mat-select>
+    <mat-hint align="end">The manufacturer of the car</mat-hint>
+  </mat-form-field>
+
+  <app-date placeholder="Build Date" formControlName="build_date" hint="The build date of the car"
+            [required]="true">
+  </app-date>
+
+  <mat-form-field>
+    <input matInput placeholder="Distance Driven" formControlName="distance_driven" type="number" class="example-right-align">
+    <mat-hint align="end">Distance driven in kilometers</mat-hint>
+    <span matSuffix>KM</span>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="damaged">Damaged</mat-checkbox>
+
+  <mat-card-actions align="center">
+    <button mat-raised-button color="primary" [disabled]="!carFormGroup.valid" (click)="createCar()">
+      <span *ngIf="!carFormGroup.controls.id.value">Create</span>
+      <span *ngIf="carFormGroup.controls.id.value">Update</span>
+    </button>
+  </mat-card-actions>
+
+</form>

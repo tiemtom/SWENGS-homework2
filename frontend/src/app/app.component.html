@@ -1,0 +1,23 @@
+<mat-toolbar *ngIf="isLoggedIn">
+  <button mat-button
+          [matMenuTriggerFor]="carMenu">Car</button>
+  <mat-menu #carMenu="matMenu">
+    <button mat-menu-item routerLink="car-list">List
+      cars</button>
+    <button mat-menu-item routerLink="car-form">Add
+      car</button>
+  </mat-menu>
+
+  <button mat-button
+          [matMenuTriggerFor]="manufacturerMenu">Manufacturer</button>
+  <mat-menu #manufacturerMenu="matMenu">
+    <button mat-menu-item routerLink="manufacturer-list">List
+      Manufacturers</button>
+    <button mat-menu-item routerLink="manufacturer-form">Add
+      manufacturer</button>
+  </mat-menu>
+
+  <app-logout></app-logout>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="manufacturers">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let manufacturer">{{manufacturer.name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef>Country</th>
+    <td mat-cell *matCellDef="let manufacturer">{{manufacturer.country}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="founding_date">
+    <th mat-header-cell *matHeaderCellDef>Founding-Date</th>
+    <td mat-cell *matCellDef="let manufacturer">{{manufacturer.founding_date}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="turnover">
+    <th mat-header-cell *matHeaderCellDef>Turnover</th>
+    <td mat-cell *matCellDef="let manufacturer">{{manufacturer.turnover}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="ceo_name">
+    <th mat-header-cell *matHeaderCellDef>CEO</th>
+    <td mat-cell *matCellDef="let manufacturer">{{manufacturer.ceo_name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let manufacturer">
+      <button mat-button [routerLink]="'/manufacturer-form/' + manufacturer.id">Edit</button>
+      <button mat-button (click)="deleteManufacturer(manufacturer)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
