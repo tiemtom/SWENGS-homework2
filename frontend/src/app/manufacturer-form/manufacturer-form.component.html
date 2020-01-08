@@ -23,8 +23,8 @@
       <mat-option [value]="null">Unknown</mat-option>
       <mat-option [value]="ceoOption.id"
                   *ngFor="let ceoOption of ceoOptions">{{ceoOption.name}}</mat-option>
-      <mat-error *ngIf="manufacturerFormGroup.controls.ceo.hasError('ceoAlreadyUsed')">Ceo already in use</mat-error>
     </mat-select>
+    <mat-error *ngIf="manufacturerFormGroup.controls.ceo.hasError('activeCeo')">Ceo already in use</mat-error>
     <mat-hint align="end">The CEO of the manufacturing company</mat-hint>
   </mat-form-field>
 

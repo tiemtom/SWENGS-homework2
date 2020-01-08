@@ -34,6 +34,6 @@ export class ManufacturerService {
   }
 
   getManufacturerCeoIds() {
-    return this.http.get('api/manufacturer/ids');
+    return this.http.get('api/manufacturer/ceos');
   }
 }

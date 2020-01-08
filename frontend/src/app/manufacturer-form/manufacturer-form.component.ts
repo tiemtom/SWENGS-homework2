@@ -32,7 +32,7 @@ export class ManufacturerFormComponent implements OnInit {
         country: ['', [Validators.required]],
         founding_date: [null, [Validators.required]],
         turnover: [0],
-        ceo: [[], []],
+        ceo: [[], [], [this.ceoValidator()]],
       });
 
     if (data.manufacturer) {
@@ -62,11 +62,6 @@ export class ManufacturerFormComponent implements OnInit {
         });
     }
   }
-/*
-    find returns an array or boolean?
-    is populating constants working? (could not get console.log/alert to work inside validator)
-    what does control do?
- */
 
   ceoValidator(): AsyncValidatorFn {
     return (control: AbstractControl): Promise<ValidationErrors | null> | Observable<ValidationErrors | null> => {
@@ -78,7 +73,7 @@ export class ManufacturerFormComponent implements OnInit {
             const activeCeo = ceos.find((m) => {
               return (m.id !== currentId) && m.ceo === currentCeo;
             });
-            if (activeCeo !== []) {
+            if (activeCeo) {
               return {
                 activeCeo: true
               };
