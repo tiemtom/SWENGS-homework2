@@ -1,0 +1,50 @@
+[
+  {
+    "model": "backend.car",
+    "pk": 1,
+    "fields": {
+      "name": "Big Car",
+      "license_plate": "123-456-789",
+      "manufacturer": 1,
+      "build_date": "2020-01-09",
+      "distance_driven": 0.0,
+      "damaged": false
+    }
+  },
+  {
+    "model": "backend.car",
+    "pk": 2,
+    "fields": {
+      "name": "Another Big Car",
+      "license_plate": "987-654-321",
+      "manufacturer": 1,
+      "build_date": "2009-08-12",
+      "distance_driven": 5005.3,
+      "damaged": true
+    }
+  },
+  {
+    "model": "backend.car",
+    "pk": 3,
+    "fields": {
+      "name": "Small Car",
+      "license_plate": "123-456",
+      "manufacturer": 2,
+      "build_date": "2020-01-09",
+      "distance_driven": 1.1,
+      "damaged": false
+    }
+  },
+  {
+    "model": "backend.car",
+    "pk": 4,
+    "fields": {
+      "name": "Clown Car",
+      "license_plate": "654-321",
+      "manufacturer": 2,
+      "build_date": "2012-01-06",
+      "distance_driven": 10000.0,
+      "damaged": false
+    }
+  }
+]

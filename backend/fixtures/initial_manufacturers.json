@@ -1,0 +1,24 @@
+[
+    {
+    "model": "backend.manufacturer",
+    "pk": 1,
+    "fields": {
+      "name": "Big Car Manufacturer",
+      "country": "Austria",
+      "founding_date": "2001-08-11",
+      "turnover": 10000,
+      "ceo": 1
+    }
+  },
+  {
+    "model": "backend.manufacturer",
+    "pk": 2,
+    "fields": {
+      "name": "Small Car Manufacturer",
+      "country": "Germany",
+      "founding_date": "1999-01-09",
+      "turnover": 50000,
+      "ceo": 2
+    }
+  }
+]

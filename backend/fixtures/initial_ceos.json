@@ -1,0 +1,26 @@
+[
+    {
+    "model": "backend.person",
+    "pk": 1,
+    "fields": {
+      "name": "Big Ceo",
+      "date_of_birth": "2020-01-09"
+    }
+  },
+  {
+    "model": "backend.person",
+    "pk": 2,
+    "fields": {
+      "name": "Small Ceo",
+      "date_of_birth": "2020-01-09"
+    }
+  },
+  {
+    "model": "backend.person",
+    "pk": 3,
+    "fields": {
+      "name": "Unemployed CEO",
+      "date_of_birth": "2020-01-08"
+    }
+  }
+]
