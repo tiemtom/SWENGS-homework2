@@ -49,11 +49,7 @@ export class CountryPickerComponent implements ControlValueAccessor, OnInit {
   ];
 
   constructor(private fb: FormBuilder) {
-    this.filteredCountries = this.country.valueChanges
-      .pipe(
-        startWith(''),
-        map(country => country ? this._filterCountries(country) : this.countries.slice())
-      );
+
   }
 
   ngOnInit() {
@@ -62,8 +58,11 @@ export class CountryPickerComponent implements ControlValueAccessor, OnInit {
       this.propagateChange(newValue);
     });
 
-
-
+    this.filteredCountries = this.country.valueChanges
+      .pipe(
+        startWith(''),
+        map(country => country ? this._filterCountries(country) : this.countries.slice())
+      );
   }
 
   private _filterCountries(value: string): Country[] {
