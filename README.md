@@ -1,6 +1,6 @@
 # SWENGS-homework2
 ### Database Model:
-![Database_model](./swengs-database-model.png)
+![Database_model](https://github.com/tiemtom/SWENGS-homework2/blob/master/swengs-homework2-model.png)
 ### Setup:
 migrate and load fixtures: initial_ceos, initial_manufacturers, initial_cars
 superuser needs to be created to login.
